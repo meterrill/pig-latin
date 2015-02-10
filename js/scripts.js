@@ -23,3 +23,14 @@ var pigLatin = function(word) {
 
   return piggy;
 };
+
+$(document).ready(function() {
+  $("form").submit(function(event) {
+    var word = $("input#word").val();
+
+    var piggy = pigLatin(word);
+    $(".piggy").text(piggy);
+
+  event.preventDefault();
+  });
+});
